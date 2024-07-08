@@ -1,0 +1,46 @@
+#include <Servo.h>
+
+Servo servo1;
+Servo servo2;
+Servo servo3;
+Servo servo4;
+Servo servo5;
+Servo servo6;
+
+int servoPin1 = 8;
+int servoPin2 = 9;
+int servoPin3 = 10;
+int servoPin4 = 11;
+int servoPin5 = 12;
+int servoPin6 = 13;
+
+void setup() {
+  servo1.attach(servoPin1);
+  servo2.attach(servoPin2);
+  servo3.attach(servoPin3);
+  servo4.attach(servoPin4);
+  servo5.attach(servoPin5);
+  servo6.attach(servoPin6);
+}
+
+void loop() {
+  for (int pos = 0; pos <= 180; pos += 1) {
+    servo1.write(pos);
+    servo2.write(pos);
+    servo3.write(pos);
+    servo4.write(pos);
+    servo5.write(pos);
+    servo6.write(pos);
+    delay(15); 
+  }
+  
+  for (int pos = 180; pos >= 0; pos -= 1) {
+    servo1.write(pos);
+    servo2.write(pos);
+    servo3.write(pos);
+    servo4.write(pos);
+    servo5.write(pos);
+    servo6.write(pos);
+    delay(15);
+  }
+}
